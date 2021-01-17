@@ -16,6 +16,10 @@ h1.big{
   line-height: 75px;
   color: #000000;
   opacity: 0.7;
+  @media screen and (max-width:768px) {
+    font-size: 36px;
+    line-height: 42px;
+  }
 }
 h1{
   font-style: normal;
@@ -24,6 +28,17 @@ h1{
   line-height: 70px;
   color: #000000;
   opacity: 0.7;
+  @media screen and (max-width:995px) {
+    font-size: 40px;
+    line-height: 52px;
+  }
+  @media screen and (max-width:768px) {
+    font-size: 30px;
+    line-height: 38px;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 h2{
   font-style: normal;
@@ -40,6 +55,10 @@ h3{
   line-height: 79px;
   color: #000000;
   opacity: 0.7;
+  @media screen and (max-width:768px) {
+    font-size: 32px;
+    line-height: 50px;
+  }
 }
 h4{
   font-style: normal;
@@ -104,6 +123,13 @@ ul{
 .t__center{
   text-align: center;
 }
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #577AF3 !important;
+  width: 20px !important;
+}
+.owl-dots{
+  margin-top: 20px !important;
+}
 
 // Button style
 .btn__primary{
@@ -138,6 +164,54 @@ ul{
   width: 100%;
   background: #FFFFFF;
   box-shadow: 0px 24px 44px rgba(0, 0, 0, 0.022);
+  &__left{
+    img{
+      @media screen and (max-width:768px){
+        width: 86px;
+      }
+    }
+  }
+  &__toggleButton{
+    display: none;
+    @media screen and (max-width:768px) {
+      position: absolute;
+      right: 30px;
+      top: 22px;
+      width: 43px;
+      height: 43px;
+      padding: 10px 7px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #fff;
+      border: 1px solid #577AF3;
+      border-radius: 10px;
+      div{
+        display: block;
+        width: 100%;
+        height: 1.5px;
+        background: #F2395B;
+      }
+    }
+  }
+  &__menu{
+    @media screen and (max-width:786px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      flex-direction: column;
+      width: 280px;
+      height: 100vh;
+      background: #fff;
+      z-index: 999;
+      padding: 30px;
+      transform: translateX(-100%);
+      transition: .5s;
+    }
+    &.showMenu{
+      transform: translateX(0);
+    }
+  }
   &__menuItem{
     a{
       font-style: normal;
@@ -159,6 +233,11 @@ ul{
     }
     &:not(:last-child){
       margin-right: 50px;
+      @media screen and (max-width:768px){
+        margin-right: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
     }
   }
 }
@@ -166,9 +245,18 @@ ul{
 // Top banner style
 .topBanner{
   padding-top: 115px;
-  margin-bottom: 110px;
+  padding-bottom: 110px;
   position: relative;
+  overflow: hidden;
+  @media screen and (max-width:768px) {
+    padding-top: 45px;
+  }
   &__left{
+    h1{
+      @media screen and (max-width:995px) {
+        margin-bottom: 15px;
+      }
+    }
     p{
       opacity: .6;
       svg{
@@ -176,13 +264,41 @@ ul{
         vertical-align: middle;
       }
     }
+    @media screen and (max-width:1199px) {
+      padding-top: 25px;
+    }
+    @media screen and (max-width:768px) {
+      padding-top: 0;
+      text-align: center;
+    }
+  }
+  &__textContent{
+    @media screen and (max-width:995px) {
+      margin-bottom: 35px;
+    }
   }
   &__right{
     position: relative;  
+    @media screen and (max-width:995px) {
+      padding-top: 65px;
+    }
+    @media screen and (max-width:768px){
+      padding-top: 110px;
+    }
     img.chat__icon{
       position: absolute;
       top: -20px;
       left: -120px;
+      @media screen and (max-width:995px) {
+        top: -30px;
+        left: -60px;
+        width: 120px;
+      }
+      @media screen and (max-width:768px) {
+        top: 52px;
+        left: 0;
+        width: 65px;
+      }
     }
     img.contact__icon{
       position: absolute;
@@ -190,26 +306,65 @@ ul{
       right: 30px;
       width: 64px;
       height: 64px;
+      @media screen and (max-width:995px) {
+        top: 26px;
+        right: 0;
+      }
+      @media screen and (max-width:768px) {
+        top: 110px;
+      }
+      @media screen and (max-width:500px) {
+        width: 41px;
+        height: 41px;
+        top: 120px;
+      }
     }
     img.phone__icon{
       position: absolute;
       bottom: 30px;
       left: -50px;  
+      @media screen and (max-width:995px) {
+        bottom: -22px;
+        left: -80px;
+        width: 125px;
+      }
+      @media screen and (max-width:768px) {
+        bottom: -65px;
+        left: -30px;
+        width: 90px;
+      }
+      @media screen and (max-width:500px) {
+        left: 0;
+        width: 75px;
+      }
     }
     img.demo__message{
       position: absolute;
       top: 115px;
       right: -80px;
       z-index: 11;
+      @media screen and (max-width:1330px) {
+        top: 100px;
+        right: -70px;
+      }
+      @media screen and (max-width:995px) {
+        display: none;
+      }
     }
   }
   &__rightBanner{
     position: relative;
     text-align: right;
+    @media screen and (max-width:768px){
+      text-align: center;
+    }
     img.right__banner{
       position: relative;
       max-width: 520px;
       width: 100%;
+      @media screen and (max-width:768px){
+        text-align: center;
+      }
     }
     .bg__shape{
       position: absolute;
@@ -222,6 +377,12 @@ ul{
       border-radius: 0px 250px 250px 250px;
       transform: rotate(75deg);
       z-index: -1;
+      @media screen and (max-width:995px) {
+        left: 10px;
+        bottom: 25px;
+        width: 200px;
+        height: 200px;
+      }
     }
   }
 }
@@ -234,6 +395,17 @@ ul{
     width: 100%;
     margin: 0 auto;
     margin-bottom: 60px;
+    p{
+      @media screen and (max-width:768px) {
+        font-size: 16px;
+        line-height: 25px;
+      }
+    }
+  }
+  .mmb__margin{
+    @media screen and (max-width:768px) {
+      margin-bottom: 35px;
+    }
   }
   &__card{
     position: relative;
@@ -245,6 +417,9 @@ ul{
     border-radius: 50px;
     text-align: center;
     padding:  45px 40px 60px 40px;
+    @media screen and (max-width:500px) {
+      padding: 45px 20px 40px 20px;
+    }
     &.cardOne{
       background: $prColor;
       background-image: url("../img/pinkvector.png");
@@ -259,6 +434,9 @@ ul{
     }
     .card__top{
       margin-bottom: 50px;
+      @media screen and (max-width:500px) {
+        margin-bottom: 30px;
+      }
       .mic__icon{
         position: relative;
         width: 180px;
@@ -270,10 +448,17 @@ ul{
         background: #FFECEF;
         margin: 0 auto;
         margin-top: 60px;
+        @media screen and (max-width:768px) {
+          margin-top: 0;
+        }
         img.greeting{
           position: absolute;
           top: 46px;
           left: -95px;
+          @media screen and (max-width:991px){
+            top: 20px;
+            left: -70px;
+          }
         }
       }
       .avatar{
@@ -310,6 +495,9 @@ ul{
         color: #fff;
         opacity: 1;
         margin-bottom: 10px;
+        @media screen and (max-width:995px) {
+          font-size: 22px;
+        }
       }
       p{
         font-size: 16px;
@@ -342,11 +530,18 @@ ul{
   padding-top: 80px;
   padding-bottom: 94px;
   background: #F1F4FF;
+  @media screen and (max-width:768px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   &__heading{
     max-width: 400px;
     width: 100%;
     margin: 0 auto;
     margin-bottom: 70px;
+    @media screen and (max-width:768px) {
+      margin-bottom: 50px;
+    }
     span{
       margin-bottom: 16px;
     }
@@ -354,6 +549,24 @@ ul{
       color: #530E1B;
       opacity: 0.7;
       line-height: 41px;
+      @media screen and (max-width:768px) {
+        font-size: 22px;
+        line-height: 28px;
+        max-width: 275px;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+  .mb__none{
+    @media screen and (max-width:768px) {
+      display: none;
+    }
+  }
+  .mb__cardSlider{
+    display: none;
+    @media screen and (max-width:768px) {
+      display: block;
     }
   }
   &__card{
@@ -363,6 +576,13 @@ ul{
     background: #fff;
     box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.01);
     border-radius: 13px;
+    @media screen and (max-width:500px) {
+      padding: 20px 25px;
+    }
+    @media screen and (max-width:768px) {
+      flex-direction: column;
+      text-align: center;
+    }
     .line{
       position: relative;
       &:before{
@@ -383,6 +603,16 @@ ul{
       font-size: 18px;
       line-height: 23px;
       opacity: .6;
+      @media screen and (max-width:768px) {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+      @media screen and (max-width:500px) {
+        max-width: 290px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 20px;
+      }
     }
     &.last__card{
       justify-content: center;
@@ -395,8 +625,23 @@ ul{
 
 // App download style start
 .appDownload{
+  position: relative;
   padding-top: 100px;
   padding-bottom: 140px;
+  overflow: hidden;
+  @media screen and (max-width:768px) {
+    text-align: center;
+    padding-top: 50px;
+  }
+  &__mobileBanner{
+    display: none;
+    @media screen and (max-width:768px) {
+      display: block;
+      position: absolute;
+      top: 27%;
+      right: 0;
+    }
+  }
   &__left{
     h1{
       margin-bottom: 20px;
@@ -409,9 +654,16 @@ ul{
       margin-bottom: 30px;
     }
     .appDownload__button{
+      @media screen and (max-width:1250px) {
+        flex-direction: column;
+      }
       a{
         &:not(:last-child){
           margin-right: 22px;
+          @media screen and (max-width:1250px) {
+            margin-right: 0;
+            margin-bottom: 20px;
+          }
         }
         width: 290px;
         padding: 15px 25px;
@@ -438,17 +690,31 @@ ul{
           font-size: 22px;
           opacity: 1 !important;
         }
+        @media screen and (max-width:1250px) {
+         display: flex;
+         justify-content: center;
+        }
+      }
+      @media screen and (max-width:768px) {
+        justify-content: center;
+        align-items: center;
       }
     }
   }
   &__right{
     position: relative;
     padding-left: 30px;
+    @media screen and (max-width:768px) {
+      display: none;
+    }
     .smallchart{
       position: absolute;
       right: -10px;
       bottom: 28px;
       z-index: -1;
+      @media screen and (max-width:1250px) {
+        right: -100px;
+      }
     }
     .bg__shape{
       position: absolute;
@@ -470,7 +736,23 @@ ul{
   padding-top: 60px;
   padding-bottom: 20px;
   background: #5E5E5E;
+  @media screen and (max-width:500px) {
+    padding-top: 40px;
+  }
   &__widget{
+    @media screen and (max-width:500px) {
+     margin-top: 20px;
+    }
+    .logo{
+      margin-bottom: 40px;
+      @media screen and (max-width:500px) {
+        display: block;
+        text-align: center;
+        img{
+          width: 120px;
+        }
+      }
+    }
     h6{
       color: #fff !important;
       margin-bottom: 16px;
@@ -734,6 +1016,7 @@ ul{
         line-height: 28px;
         color: $snColor;
         margin-bottom: 15px;
+        opacity: 1;
       }
       p{
         font-size: 16px;
@@ -864,6 +1147,7 @@ ul{
       color: #000000;
       border-radius: 11px;
       background: #ECF5FF;
+      opacity: 1;
       span.icon {
         position: absolute;
         right: 25px;
@@ -1016,6 +1300,176 @@ ul{
     &.cardRight{
       background: #ECF5FF;
       border: 1px solid #577AF3;
+    }
+  }
+}
+
+// Terms page style start
+.terms{
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 50px;
+  &__heading{
+    margin-bottom: 110px;
+    h2{
+      opacity: 1;
+      span.text{
+        opacity: .7;
+      }
+      span.icon{
+        vertical-align: middle;
+      }
+    }
+  }
+  &__content{
+    position: relative;
+    padding: 90px 150px 150px 150px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 54px rgba(0, 0, 0, 0.05);
+    border-radius: 50px;
+    .content__bg{
+      img{
+        position: absolute;
+        max-width: 970px;
+        width: 100%;
+        top: -77px;
+        z-index: -1;
+      }
+    }
+    .small-heading{
+      font-style: normal;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 26px;
+      margin-bottom: 15px;
+      color: #000000;
+      opacity: 0.7;
+    }
+    ul{
+      li{
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 26px;
+        color: #000000;
+        opacity: 0.5;
+        &:before{
+          position: absolute;
+          content: "";
+          left: 0;
+          top: 8px;
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background: $prColor;
+        }
+      }
+    }
+  }
+  &__innerHeaing{
+    margin-bottom: 80px;
+    h4{
+      margin-bottom: 25px;
+    }
+    p{
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 26px;
+      text-align: center;
+      color: #000000;
+      opacity: 0.4;
+    }
+  }
+}
+
+// Privacy page style start
+.privacy{
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 50px;
+  &__heading{
+    margin-bottom: 110px;
+    h2{
+      opacity: 1;
+      span.text{
+        opacity: .7;
+      }
+      span.icon{
+        vertical-align: middle;
+      }
+    }
+  }
+  &__content{
+    position: relative;
+    padding: 90px 150px 150px 150px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 54px rgba(0, 0, 0, 0.05);
+    border-radius: 50px;
+    .content__bg{
+      img{
+        position: absolute;
+        max-width: 970px;
+        width: 100%;
+        top: -77px;
+        z-index: -1;
+      }
+    }
+    .small-heading{
+      font-style: normal;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 36px;
+      margin-bottom: 15px;
+      color: #000000;
+      opacity: 0.7;
+    }
+    ul{
+      li{
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 26px;
+        color: #000000;
+        opacity: 0.5;
+        &:before{
+          position: absolute;
+          content: "";
+          left: 0;
+          top: 8px;
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background: $prColor;
+        }
+        a{
+          color: $snColor;
+        }
+      }
+    }
+    .table .thead-dark th {
+      color: #fff;
+      background-color:$snColor !important;
+      border-color: $snColor !important;
+    }
+  }
+  &__innerHeaing{
+    margin-bottom: 80px;
+    h4{
+      margin-bottom: 25px;
+    }
+    p{
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 26px;
+      text-align: center;
+      color: #000000;
+      opacity: 0.4;
     }
   }
 }
