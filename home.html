@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
     <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -35,7 +37,12 @@
                     <img src="img/logo.png" alt="Twible Logo">
                 </a>
             </div>
-            <ul class="header__menu d__flex">
+            <div class="header__toggleButton" id="toggle">
+                <div class="toggleButton__line"></div>
+                <div class="toggleButton__line"></div>
+                <div class="toggleButton__line"></div>
+            </div>
+            <ul class="header__menu d__flex" id="menu">
                 <li class="header__menuItem active">
                     <a href="index.html">Home</a>
                 </li>
@@ -96,7 +103,7 @@
                 <div class="col-md-6">
                     <div class="topBanner__right">
                         <img class="chat__icon" src="img/chat.png" alt="Chat Icon">
-                        <img class="contact__icon" src="img/contact.png" alt="Contact Icon">
+                        <img class="contact__icon" src="img/contact.svg" alt="Contact Icon">
                         <img class="phone__icon" src="img/phone-call.svg" alt="Phone-call Icon">
                         <img class="demo__message" src="img/demomessage.png" alt="Demo message">
                         <div class="topBanner__rightBanner">
@@ -121,7 +128,7 @@
             </div>
             <div class="features__content">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 mmb__margin">
                         <div class="features__card cardOne">
                             <div class="card__top">
                                 <div class="mic__icon">
@@ -183,7 +190,7 @@
                 </h4>
             </div>
             <div class="security__content">
-                <div class="row">
+                <div class="row mb__none">
                     <div class="col-md-6 mb-30">
                         <div class="security__card d__flex ai__center">
                             <span class="icon">
@@ -255,6 +262,64 @@
                         </div>
                     </div>
                 </div>
+                <div class="mb__cardSlider owl-carousel owl-theme">
+                    <div class="security__card d__flex ai__center">
+                        <span class="icon">
+                            <img src="img/eye.svg" alt="Security Icon">
+                        </span>
+                        <p>
+                            Twible cannot see your private messages or hear your calls.
+                        </p>
+                    </div>
+                    <div class="security__card d__flex ai__center">
+                        <span class="icon">
+                            <img src="img/arrow.svg" alt="Security Icon">
+                        </span>
+                        <p>
+                            Twible does not keep logs of who everone is calling or messaging on server.
+                        </p>
+                    </div>
+                    <div class="security__card d__flex ai__center">
+                        <span class="icon line">
+                            <img src="img/location.svg" alt="Security Icon">
+                        </span>
+                        <p>
+                            Twible cannot see your shared location.
+                        </p>
+                    </div>
+                    <div class="security__card d__flex ai__center">
+                        <span class="icon line">
+                            <img src="img/contacts-vector.svg" alt="Security Icon">
+                        </span>
+                        <p>
+                            Twible does not share your contacts with anyone.
+                        </p>
+                    </div>
+                    <div class="security__card d__flex ai__center">
+                        <span class="icon line">
+                            <img src="img/people.svg" alt="Security Icon">
+                        </span>
+                        <p>
+                            Twible groups remain private.
+                        </p>
+                    </div>
+                    <div class="security__card d__flex ai__center">
+                        <span class="icon">
+                            <img src="img/stopwatch.svg" alt="Security Icon">
+                        </span>
+                        <p>
+                            Its fully private hide user/your customer details in groups.
+                        </p>
+                    </div>
+                    <div class="security__card d__flex ai__center mb-0 last__card">
+                        <span class="icon">
+                            <img src="img/download.svg" alt="Security Icon">
+                        </span>
+                        <p>
+                            You can download your data.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -262,6 +327,9 @@
 
     <!-- App download start -->
     <section class="appDownload">
+        <div class="appDownload__mobileBanner">
+            <img src="img/downloadmb-banner.png" alt="Mobile banner">
+        </div>
         <div class="container">
             <div class="row ai__center">
                 <div class="col-md-6">
@@ -320,14 +388,14 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3 col-12">
                     <div class="footer__widget">
                         <a href="" class="logo">
                             <img src="img/logo-white.png" alt="Footer Logo">
                         </a>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-6">
                     <div class="footer__widget">
                         <h6>ABOUT</h6>
                         <ul class="footer__menu">
@@ -338,7 +406,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-6">
                     <div class="footer__widget">
                         <h6>LEGAL</h6>
                         <ul class="footer__menu">
@@ -348,7 +416,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-6">
                     <div class="footer__widget">
                         <h6>FOLLOW US</h6>
                         <ul class="footer__social d__flex">
@@ -408,6 +476,7 @@
     <!-- JS here -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
     <script src="js/app.js"></script>
 
 </body>
